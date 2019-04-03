@@ -1,0 +1,83 @@
+{
+  "manifest_version": 2,
+  "name": "Search Shortcuts",
+  "version": "0.1.0",
+
+  "description": "Binds the 10 number keys to the first 10 results on Google Search",
+
+  "permissions": ["*://*.google.com/search*"],
+
+  "background": {
+    "scripts": ["bindings.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/search*"],
+      "js": ["actions.js"]
+    }
+  ],
+
+  "commands": {
+    "goto-link-1": {
+      "suggested_key": {
+        "default": "Alt+1"
+      },
+      "description": "Go to the first search result"
+    },
+    "goto-link-2": {
+      "suggested_key": {
+        "default": "Alt+2"
+      },
+      "description": "Go to the second search result"
+    },
+    "goto-link-3": {
+      "suggested_key": {
+        "default": "Alt+3"
+      },
+      "description": "Go to the third search result"
+    },
+    "goto-link-4": {
+      "suggested_key": {
+        "default": "Alt+4"
+      },
+      "description": "Go to the fourth search result"
+    },
+    "goto-link-5": {
+      "suggested_key": {
+        "default": "Alt+5"
+      },
+      "description": "Go to the fifth search result"
+    },
+    "goto-link-6": {
+      "suggested_key": {
+        "default": "Alt+6"
+      },
+      "description": "Go to the sixth search result"
+    },
+    "goto-link-7": {
+      "suggested_key": {
+        "default": "Alt+7"
+      },
+      "description": "Go to the seventh search result"
+    },
+    "goto-link-8": {
+      "suggested_key": {
+        "default": "Alt+8"
+      },
+      "description": "Go to the eighth search result"
+    },
+    "goto-link-9": {
+      "suggested_key": {
+        "default": "Alt+9"
+      },
+      "description": "Go to the ninth search result"
+    },
+    "goto-link-10": {
+      "suggested_key": {
+        "default": "Alt+0"
+      },
+      "description": "Go to the tenth search result"
+    }
+  }
+}
